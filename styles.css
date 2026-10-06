@@ -48,7 +48,7 @@ button{font:inherit}
 }
 .nav{min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand{display:flex;align-items:center}
-.brand img{width:280px;max-height:58px}
+.brand img{width:320px;max-height:68px;object-fit:contain}
 .nav-links{display:flex;align-items:center;gap:30px;font-size:.9rem;font-weight:650}
 .nav-links a{opacity:.82;transition:.2s ease}
 .nav-links a:hover{opacity:1;color:var(--ice)}
@@ -75,7 +75,14 @@ button{font:inherit}
     linear-gradient(180deg,transparent 62%,#030915 100%)
 }
 .hero-grid{position:relative;z-index:2;padding-top:120px;padding-bottom:100px}
-.hero-copy{max-width:760px}
+.hero-copy{max-width:860px;margin:0 auto;text-align:center}
+.hero-stacked-logo{
+  width:min(320px,62vw);
+  margin:0 auto 22px;
+  filter:drop-shadow(0 20px 42px rgba(0,0,0,.38));
+}
+.hero-actions{justify-content:center}
+.principles{justify-content:center}
 .hero h1{
   margin:0;
   max-width:780px;
@@ -160,7 +167,7 @@ blockquote{margin:0 auto;max-width:1000px;font-family:Georgia,serif;font-size:cl
 .contact-stack .btn{margin-top:14px}
 .site-footer{padding:72px 0 28px;background:#02060e;border-top:1px solid var(--line)}
 .footer-top{display:grid;grid-template-columns:1.5fr .75fr .75fr;gap:50px;padding-bottom:54px}
-.footer-logo{width:310px;max-height:72px}
+.footer-logo{width:340px;max-height:82px;object-fit:contain}
 .muted{color:var(--muted)}
 .footer-col{display:flex;flex-direction:column;gap:9px;color:#b8c4d2;font-size:.9rem}
 .footer-title{margin-bottom:8px;color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
@@ -176,7 +183,7 @@ blockquote{margin:0 auto;max-width:1000px;font-family:Georgia,serif;font-size:cl
 .legal-back{display:inline-block;margin-bottom:28px;color:#0b67d6;font-weight:800}
 @media(max-width:900px){
   .nav{min-height:78px}
-  .brand img{width:220px}
+  .brand img{width:245px;max-height:58px}
   .nav-menu{display:block}
   .nav-links{
     position:fixed;inset:78px 0 auto;background:rgba(3,9,21,.98);
@@ -186,6 +193,7 @@ blockquote{margin:0 auto;max-width:1000px;font-family:Georgia,serif;font-size:cl
   .nav-links.open{display:flex}
   .hero{min-height:88vh}
   .hero h1{font-size:clamp(3.7rem,16vw,6rem)}
+  .hero-stacked-logo{width:245px}
   .trust-grid{grid-template-columns:1fr 1fr}
   .trust-item:nth-child(odd){border-left:1px solid var(--line)}
   .split,.section-head,.approach-grid,.cta-grid{grid-template-columns:1fr;gap:38px}
@@ -201,6 +209,7 @@ blockquote{margin:0 auto;max-width:1000px;font-family:Georgia,serif;font-size:cl
   .hero-media{background-position:63% center}
   .hero-copy{padding-top:50px}
   .hero h1{font-size:3.8rem}
+  .hero-stacked-logo{width:215px;margin-bottom:18px}
   .principles{gap:10px;font-size:.64rem}
   .principles i{width:16px}
   .trust-grid{grid-template-columns:1fr}
